@@ -1,0 +1,43 @@
+version: '3.4'
+services:
+  web_app:
+    build:
+      args:
+        USER_ID: 1000
+      context: .
+    # CHANGEME: Use database and/or redis if needed (SQLite doesn't need this since it's installed directly in the container)
+    # depends_on:
+    #   - postgres
+    #   - redis
+    environment:
+      - RAILS_PORT=3000 # Do not forget to change ports below when changing this
+      - REDIS_URL="redis://redis:6379/1" # Name (same as the service below) and port of the redis server (don't forget to change port in redis service if it changes...)
+    ports:
+      - '3000:3000' # Do not forget to change RAILS_PORT above when changing this
+    volumes:
+      - .:/app # Same as $WORKDIR from Dockerfile
+      - gems:/gems # Cache gems from 'bundler' commands (install, update, etc...) in gems volume
+
+  # CHANGEME: Uncomment service below or remove comment block
+  # Other services depend on this. It shouldn't be run by itself
+  # postgres:
+  #   environment:
+  #     - POSTGRES_USER=postgres_user
+  #     - POSTGRES_PASSWORD=postgres_password
+  #     - POSTGRES_DB=database_dev
+  #   # https://hub.docker.com/_/postgres
+  #   image: postgres:13.2
+  #   ports:
+  #     - '5432:5432'
+
+  # CHANGEME: Uncomment service below or remove comment block
+  # Other services depend on this. It shouldn't be run by itself
+  # redis:
+  #   # https://hub.docker.com/_/redis
+  #   image: redis:6.2.1
+  #   ports:
+  #     - '6379:6379' # Do not forget to change REDIS_URL when changing this
+
+volumes:
+  # Cache gems from 'bundler' commands (install, update, etc...)
+  gems:
