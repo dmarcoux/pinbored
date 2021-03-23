@@ -9,10 +9,7 @@ ENV LANG C.UTF-8
 RUN apt-get update -qq
 
 # Install dependencies for the application
-RUN apt-get install -qq -y build-essential
-# CHANGEME: Select one database and add the package(s) to the `apt-get install (...)` line above
-# postgres: libpq-dev
-# sqlite: sqlite3 libsqlite3-dev
+RUN apt-get install -qq -y build-essential sqlite3 libsqlite3-dev redis-tools
 
 # Set the directory of the application and switch to it
 ENV WORK_DIR /app
