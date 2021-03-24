@@ -31,6 +31,8 @@ gem "redis", "~> 4.0"
 gem "bootsnap", ">= 1.4.4", require: false
 
 group :development, :test do
+  # Audit Gemfile.lock for vulnerable versions of gems and insecure gem sources (http://)
+  gem "bundler-audit"
   # Behaviour Driven Development for Ruby
   gem "rspec"
   # Behaviour Driven Development for Rails
