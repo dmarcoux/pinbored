@@ -9,7 +9,6 @@ require "rails/all"
 Bundler.require(*Rails.groups)
 
 module Pinbored
-  # Contains configuration and initialization code which is available to every Rails application
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 6.1
