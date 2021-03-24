@@ -29,8 +29,10 @@ gem 'redis', '~> 4.0'
 gem 'bootsnap', '>= 1.4.4', require: false
 
 group :development, :test do
-  # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  # Behaviour Driven Development for Ruby
+  gem 'rspec'
+  # Behaviour Driven Development for Rails
+  gem 'rspec-rails'
 end
 
 group :development do
