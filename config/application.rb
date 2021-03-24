@@ -13,6 +13,16 @@ module Pinbored
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 6.1
 
+    # See available generator options which are matching CLI options from `bundle exec rails g scaffold --help`
+    # https://guides.rubyonrails.org/generators.html (search for config.generators)
+    config.generators do |generator|
+      # Do not generate helpers since they're unneeded most of the time
+      generator.helper false
+
+      # Do not generate RSpec specs for routes since the vast majority of routes are RESTful
+      generator.test_framework :rspec, routing_specs: false
+    end
+
     # Configuration for the application, engines, and railties goes here.
     #
     # These settings can be overridden in specific environments using the files
