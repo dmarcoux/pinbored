@@ -15,6 +15,10 @@ AllCops:
   NewCops: enable
   UseCache: true
 
+# It's unneeded to enforce this for all classes and modules
+Style/Documentation:
+  Enabled: false
+
 # https://web.archive.org/web/20200805104844if_/https://anti-pattern.com/always-use-double-quoted-strings-in-ruby
 Style/StringLiterals:
   EnforcedStyle: double_quotes
