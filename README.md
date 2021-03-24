@@ -1,4 +1,6 @@
-# README
+# <a href="https://github.com/dmarcoux/pinbored">Pinbored</a>
+
+[![CircleCI](https://circleci.com/gh/dmarcoux/pinbored.svg?style=svg)](https://circleci.com/gh/dmarcoux/pinbored)
 
 This README would normally document whatever steps are necessary to get the
 application up and running.
