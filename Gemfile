@@ -33,6 +33,14 @@ group :development, :test do
   gem 'rspec'
   # Behaviour Driven Development for Rails
   gem 'rspec-rails'
+  # Linter for Ruby
+  gem 'rubocop', require: false
+  # Linter for Rails
+  gem 'rubocop-rails', require: false
+  # Linter for RSpec
+  gem 'rubocop-rspec', require: false
+  # Linter for performance checks in Ruby
+  gem 'rubocop-performance', require: false
 end
 
 group :development do
