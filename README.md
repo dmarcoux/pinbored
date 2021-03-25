@@ -2,25 +2,7 @@
 
 [![CircleCI](https://circleci.com/gh/dmarcoux/pinbored.svg?style=svg)](https://circleci.com/gh/dmarcoux/pinbored)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+### Development
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Setup the development environment by running `bundle exec rake
+development:setup`.
