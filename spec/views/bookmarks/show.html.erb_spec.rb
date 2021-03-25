@@ -8,7 +8,7 @@ RSpec.describe "bookmarks/show", type: :view do
                                     title: "Title",
                                     url: "MyText",
                                     description: "MyText",
-                                    visibiliy: 2
+                                    visibility: 2
                                   ))
   end
 

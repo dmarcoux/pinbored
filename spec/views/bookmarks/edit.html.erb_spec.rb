@@ -8,7 +8,7 @@ RSpec.describe "bookmarks/edit", type: :view do
                         title: "MyString",
                         url: "MyText",
                         description: "MyText",
-                        visibiliy: 1
+                        visibility: 1
                       ))
   end
 
@@ -22,7 +22,7 @@ RSpec.describe "bookmarks/edit", type: :view do
 
       assert_select "textarea[name=?]", "bookmark[description]"
 
-      assert_select "input[name=?]", "bookmark[visibiliy]"
+      assert_select "input[name=?]", "bookmark[visibility]"
     end
   end
 end

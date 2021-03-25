@@ -16,10 +16,10 @@ ActiveRecord::Schema.define(version: 2021_03_24_221339) do
     t.string "title", default: "", null: false
     t.text "url", default: "", null: false
     t.text "description", default: "", null: false
-    t.integer "visibiliy", default: 0, null: false
+    t.integer "visibility", default: 0, null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index "\"visibility\"", name: "index_bookmarks_on_visibility"
+    t.index ["visibility"], name: "index_bookmarks_on_visibility"
   end
 
 end
