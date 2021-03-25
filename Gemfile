@@ -33,6 +33,10 @@ gem "bootsnap", ">= 1.4.4", require: false
 group :development, :test do
   # Audit Gemfile.lock for vulnerable versions of gems and insecure gem sources (http://)
   gem "bundler-audit"
+  # Alternative to IRB (interactive Ruby)
+  gem "pry"
+  # Step-by-step debugging and stack navigation in Pry
+  gem "pry-byebug"
   # Behaviour Driven Development for Ruby
   gem "rspec"
   # Behaviour Driven Development for Rails
