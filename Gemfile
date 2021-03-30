@@ -17,10 +17,10 @@ gem "puma", "~> 5.0"
 gem "rails", "~> 6.1.3"
 # Use Redis adapter to run Action Cable in production
 gem "redis", "~> 4.0"
-# Use SCSS for stylesheets
-gem "sass-rails", ">= 6"
 # Use sqlite3 as the database for Active Record
 gem "sqlite3", "~> 1.4"
+# Integrate Tailwind CSS with the asset pipeline
+gem "tailwindcss-rails"
 
 group :development, :test do
   # Audit Gemfile.lock for vulnerable versions of gems and insecure gem sources (http://)
