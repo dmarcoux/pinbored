@@ -8,13 +8,19 @@ ENV LANG C.UTF-8
 # Update package index files
 RUN apt-get update -qq
 
+# Add Node.js PPA (Personal Package Archive) from NodeSource
+RUN curl -sL https://deb.nodesource.com/setup_14.x | bash -
+
 # Install dependencies for the application
-RUN apt-get install -qq -y build-essential sqlite3 libsqlite3-dev redis-tools
+RUN apt-get install -qq -y build-essential sqlite3 libsqlite3-dev redis-tools nodejs
 
 # Set the directory of the application and switch to it
 ENV WORK_DIR /app
 RUN mkdir -p $WORK_DIR
 WORKDIR $WORK_DIR
+
+# Add installed Node.js packages to the $PATH
+ENV PATH="$WORK_DIR/node_modules/.bin:$PATH"
 
 ARG USER_ID=1000
 # Create a user with the same ID as the user building this Dockerfile

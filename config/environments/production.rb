@@ -27,7 +27,7 @@ Rails.application.configure do
   config.public_file_server.enabled = ENV["RAILS_SERVE_STATIC_FILES"].present?
 
   # Compress CSS using a preprocessor.
-  config.assets.css_compressor = :purger # From the gem tailwindcss-rails
+  config.assets.css_compressor = Tailwindcss::Compressor.new({ only_purge: %w[tailwindcss_custom] })
 
   # Do not fallback to assets pipeline if a precompiled asset is missed.
   config.assets.compile = false

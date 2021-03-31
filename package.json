@@ -1,0 +1,6 @@
+{
+  "devDependencies": {
+    "@tailwindcss/forms": "^0.3.2",
+    "tailwindcss-cli": "^0.1.2"
+  }
+}

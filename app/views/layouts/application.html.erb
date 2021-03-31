@@ -6,17 +6,16 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag "inter-font" %>
-    <%= stylesheet_link_tag "tailwind" %>
+    <%= stylesheet_link_tag "tailwindcss_custom" %>
     <%= stylesheet_link_tag 'application', media: 'all' %>
     <%= stimulus_include_tags %>
     <%= javascript_include_tag "turbo", type: "module-shim" %>
     <%= yield :head %>
   </head>
 
-  <body>
-    <nav>
-      <ul>
+  <body class="lg:container lg:mx-auto">
+    <nav class="p-2 border-b-2 rounded border-green-700">
+      <ul class="divide-x-2 divide-green-700">
         <%= link_to("Bookmarks", root_path) %>
       </ul>
     </nav>

@@ -1,0 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@tailwind form;
+
+a {
+  @apply px-2 hover:text-blue-700;
+}
