@@ -20,6 +20,8 @@ gem "redis", "~> 4.0"
 gem "sqlite3", "~> 1.4"
 # Integrate Tailwind CSS with the asset pipeline
 gem "tailwindcss-rails"
+# Build reusable, testable & encapsulated view components in Ruby on Rails
+gem "view_component", require: "view_component/engine"
 
 group :development, :test do
   # Audit Gemfile.lock for vulnerable versions of gems and insecure gem sources (http://)
