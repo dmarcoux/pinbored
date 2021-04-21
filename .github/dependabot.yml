@@ -12,6 +12,8 @@ updates:
     allow:
       # Update direct and indirect dependencies
       - dependency-type: "all"
+    # Prevent Dependabot from creating PRs in this repository
+    open-pull-requests-limit: 0
   - package-ecosystem: "npm"
     directory: "/"
     schedule:
@@ -23,3 +25,5 @@ updates:
     allow:
       # Update direct dependencies (indirect dependencies are not supported for NPM, so "all" only target direct dependencies)
       - dependency-type: "all"
+    # Prevent Dependabot from creating PRs in this repository
+    open-pull-requests-limit: 0
