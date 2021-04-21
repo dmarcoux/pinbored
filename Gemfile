@@ -24,6 +24,8 @@ gem "tailwindcss-rails"
 group :development, :test do
   # Audit Gemfile.lock for vulnerable versions of gems and insecure gem sources (http://)
   gem "bundler-audit"
+  # Create fixtures (sample data) for tests
+  gem "factory_bot_rails"
   # Alternative to IRB (interactive Ruby)
   gem "pry"
   # Step-by-step debugging and stack navigation in Pry
